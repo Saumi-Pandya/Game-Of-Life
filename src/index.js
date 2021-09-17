@@ -74,7 +74,25 @@ class Main extends React.Component{
 		});
 	}
 
+  seed = () =>{
+    let gridCopy = arrayClone(this.state.gridFull);
+    for(var i =0;i<this.rows;i++){
+      for(var j =0;j<this.cols;j++){
+        var temp = Math.random();
+        if(temp>0.8)gridCopy[i][j] = !gridCopy[i][j];
+      }
+    }
+    this.setState({
+			gridFull: gridCopy
+		});
+  }
+
+  componentDidMount(){
+    this.seed();
+  }
+
   render(){
+    
     return (
       <div>
         <h1>Welcome to the Game Of Life</h1>
