@@ -27,6 +27,8 @@ body {
   margin: auto;
   display: table;
   margin-top: 10px;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .grid {
