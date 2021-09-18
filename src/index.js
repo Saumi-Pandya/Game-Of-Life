@@ -24,7 +24,7 @@ class Box extends React.Component {
 
 class Grid extends React.Component{
   render(){
-    const width = (this.props.cols * 16)+1;
+    const width = (this.props.cols * 15)+1;
     var rowsArr = [];
     var boxClass = "";
     
@@ -164,7 +164,7 @@ class Main extends React.Component{
     
     return (
       <div>
-        <h1>Welcome to the Game Of Life</h1>
+        <h1 style = {{color:'black'}}>Welcome to the Game Of Life</h1>
         <Buttons
           playButton = {this.playButton}
           pauseButton = {this.pauseButton}
@@ -177,7 +177,7 @@ class Main extends React.Component{
         cols = {this.cols}
         selectBox = {this.selectBox}
         />
-        <h2>Generations:{this.state.generation}</h2>
+        <h2  style = {{color:'black'}}>Generations:{this.state.generation}</h2>
         
       </div>
     );
