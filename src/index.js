@@ -4,7 +4,7 @@ import './index.css';
 import { ButtonToolbar, MenuItem, DropdownButton } from 'react-bootstrap';
 
 
-
+// class which returns individual grid elements(box)
 class Box extends React.Component {
 	selectBox = () => {
 		this.props.selectBox(this.props.row, this.props.col);
@@ -21,7 +21,7 @@ class Box extends React.Component {
 	}
 }
 
-
+// class representing the overall grid which contains the box elements
 class Grid extends React.Component{
   render(){
     const width = (this.props.cols * 15)+1;
@@ -53,6 +53,7 @@ class Grid extends React.Component{
   }
 };
 
+// class to display different buttons on screen
 class Buttons extends React.Component {
 
 	handleSelect = (evt) => {
@@ -63,16 +64,16 @@ class Buttons extends React.Component {
 		return (
 			<div className="center">
 				<ButtonToolbar>
-					<button className="btn btn-default" onClick={this.props.playButton}>
+					<button className="btn btn-default" onClick={this.props.playButton} style = {{backgroundColor:'white'}}>
 						Play
 					</button>
-					<button className="btn btn-default" onClick={this.props.pauseButton}>
+					<button className="btn btn-default" onClick={this.props.pauseButton} style = {{backgroundColor:'white'}}>
 					  Pause
 					</button>
-          <button className="btn btn-default" onClick={this.props.clear}>
+          <button className="btn btn-default" onClick={this.props.clear} style = {{backgroundColor:'white'}}>
 					  Clear
 					</button>
-					<button className="btn btn-default" onClick={this.props.seed}>
+					<button className="btn btn-default" onClick={this.props.seed} style = {{backgroundColor:'white'}}>
 					  Seed
 					</button>
 				</ButtonToolbar>
@@ -81,6 +82,7 @@ class Buttons extends React.Component {
 	}
 }
 
+// Main class 
 class Main extends React.Component{
 
   constructor(){
@@ -127,7 +129,8 @@ class Main extends React.Component{
   play = () => {
 		let g = this.state.gridFull;
 		let g2 = arrayClone(this.state.gridFull);
-
+    
+    // core login of the game
 		for (let i = 0; i < this.rows; i++) {
 		  for (let j = 0; j < this.cols; j++) {
 		    let count = 0;
@@ -164,7 +167,7 @@ class Main extends React.Component{
     
     return (
       <div>
-        <h1 style = {{color:'black'}}>Welcome to the Game Of Life</h1>
+        <h1>Welcome to the Game Of Life</h1>
         <Buttons
           playButton = {this.playButton}
           pauseButton = {this.pauseButton}
@@ -177,7 +180,7 @@ class Main extends React.Component{
         cols = {this.cols}
         selectBox = {this.selectBox}
         />
-        <h2  style = {{color:'black'}}>Generations:{this.state.generation}</h2>
+        <h2>Generations:{this.state.generation}</h2>
         
       </div>
     );
@@ -185,7 +188,7 @@ class Main extends React.Component{
 
 };
 
-
+// function to create clone of the array
 function arrayClone(arr) {
 	return JSON.parse(JSON.stringify(arr));
 };

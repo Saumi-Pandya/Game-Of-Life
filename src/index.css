@@ -1,5 +1,5 @@
 body {
-  background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/squares.png) 
+  background-image: url(https://wallpapercave.com/wp/wp3432033.jpg) 
 }
   
 .box {
@@ -35,6 +35,11 @@ body {
   margin: auto;
   box-shadow: 0px 0px 20px white;
   margin-top: 20px;
+}
+
+.btn-custom {
+  background-color:'white';
+  margin-left : 2px;
 }
   
 h1, h2, h3, h4 {
