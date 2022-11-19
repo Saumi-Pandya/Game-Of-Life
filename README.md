@@ -17,5 +17,9 @@ These rules, which compare the behavior of the automaton to real life, can be co
 The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed, live or dead; births and deaths occur simultaneously, and the discrete moment at which this happens is sometimes called a tick. Each generation is a pure function of the preceding one. The rules continue to be applied repeatedly to create further generations.
 
 
-https://user-images.githubusercontent.com/72929195/202840043-acb132e0-1f4e-4b59-bddc-83cf3da403a5.mp4
+
+
+https://user-images.githubusercontent.com/72929195/202840308-7a92bc28-a5ad-4ed6-9d6c-440d7a0db942.mp4
+
+
 
